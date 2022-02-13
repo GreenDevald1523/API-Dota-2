@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Mitr&family=Quicksand:wght@300&display=swap");
+header,
+main,
+footer,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 2;
+    -webkit-transition: 1s all;
+    transition: 1s all;
+    opacity: 1;
+}
+
+.preloader .loader {
+    width: 75px;
+    height: 75px;
+    border: 15px solid white;
+    border-radius: 50%;
+    border-top-color: darkred;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-animation: 1s spin infinite linear;
+    animation: 1s spin infinite linear;
+}
+
+.preloader.done {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+body {
+    color: #eeeeee;
+    font-family: "Mitr";
+    /* background: url("https://phonoteka.org/uploads/posts/2021-06/1624631901_5-phonoteka_org-p-oboi-na-rabochii-stol-dota-krasivo-5.jpg") no-repeat fixed center center #d1d0d5; */
+    background: url("https://dotaskills.ru/wp-content/uploads/2016/11/dota-art-red-blue.jpg") center center no-repeat fixed;
+    background-size: cover;
+}
+
+.body_hide {
+    opacity: 0;
+    transition: 0.9s opacity ease-in-out;
+}
+
+.body_visible {
+    opacity: 1;
+}
+
+.wrapper {
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+    padding-bottom: 50px;
+}
+
+.content {
+    flex: 1 1 auto;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.main {
+    background-color: rgba(0, 0, 0, 0.7);
+    max-width: 60%;
+    margin: 0 auto;
+    padding-bottom: 150px;
+    margin-top: 15%;
+    border: 1px solid white;
+    border-radius: 30px;
+    /* box-shadow: inset 0 0 30px purple; */
+    box-shadow: 0 0 30px black;
+}
+
+.main__input-title {
+    font-family: serif;
+    font-size: 60px;
+    color: #927f6b;
+    font-weight: 400;
+    letter-spacing: 5px;
+    line-height: 70px;
+    padding-top: 30px;
+}
+
+.main__input-text {
+    margin-top: 20px;
+    font-size: 13px;
+    margin: 20px auto;
+    max-width: 470px;
+}
+
+.dota2__icon {
+    height: 40px;
+    width: 40px;
+}
+
+.nav-item:hover {
+    color: grey;
+    transition: all 0.2s ease 0;
+}
+
+.main__input {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.main__instructions {
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 0 auto;
+    margin-top: 500px;
+    padding: 30px;
+    max-width: 95%;
+}
+
+.main__title {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 40px;
+    color: black;
+}
+
+.main__sub {
+    font-size: 20px;
+    color: black;
+    margin: 0 auto;
+}
+
+.pic1,
+.pic2,
+.pic3,
+.pic4,
+.main__sub {
+    min-width: 300px;
+    max-width: 330px;
+}
+
+.instruction__1,
+.instruction__2,
+.instruction__3,
+.instruction__4 {
+    margin-top: 100px;
+}
+
+.steamInput {
+    border-radius: 5px;
+    border: 1 px solid grey;
+}
+
+.modal__result {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.form {
+    display: flex;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+}
+
+.idInput {
+    margin: 0 1px;
+}
+
+#img {
+    height: 200px;
+    width: 200px;
+    box-shadow: 0 0 10px black;
+    margin: 0 30px 30px 30px;
+}
+
+.stats__items {
+    list-style-type: none;
+    font-family: 'consolas';
+    font-size: 27px;
+}
+
+@media (max-width: 1100px) {
+    .stats__items {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 910px) {
+    .stats__items {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 850px) {
+    .main {
+        background-color: rgba(0, 0, 0, 0.7);
+        margin-top: 45%;
+        max-height: 65%;
+        max-width: 70%;
+    }
+    #img {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 780px) {
+    .stats__items {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 650px) {
+    #img {
+        height: 110px;
+        width: 110px;
+        margin-left: 36%;
+    }
+}
+
+@media (max-width: 550px) {
+    #img {
+        height: 100px;
+        width: 100px;
+    }
+    .result {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 450px) {
+    .main__input-title {
+        font-size: 50px;
+    }
+    .instr {
+        max-width: 180px;
+    }
+    .main {
+        max-width: 80%;
+    }
+    #img {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media (max-width: 390px) {
+    .main__input-title {
+        font-size: 45px;
+    }
+    .instr {
+        max-width: 140px;
+    }
+    .main {
+        max-width: 90%;
+    }
+}
+
+.animate {
+    animation-duration: 1.3s;
+    animation-fill-mode: both;
+}
+
+.one {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -15%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fadeInLeft {
+    animation-name: fadeInLeft;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fadeInRight {
+    animation-name: fadeInRight;
+}
+
+
+/* .btn:hover {
+    background-color: purple;
+    border: 1px solid purple;
+    transition: all 0.4s ease-in-out 0;
+} */
+
+.btn:hover {
+    background-color: darkred;
+    border: 1px solid darkred;
+    transition: all 0.4s ease-in-out 0;
+}
+
+.nav .nav-item a img:hover {
+    transform: scale(0.8);
+    transition: all 0.3s;
+}
+
+.nav .nav-item a img {
+    transform: scale(1);
+    transition: all 0.3s;
+}
+
+.idError {
+    color: wheat;
+    font-size: 15px;
+    margin-top: -15px;
+    font-weight: 900;
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    position: absolute;
+}
+
+.idError {
+    font-family: 'consolas';
+}
+
+.main2 {}
+
+.result {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10%;
+}
+
+.background-black {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.stats {}
+
+.container2 {
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+.reboot {
+    margin-top: 40px;
+}
